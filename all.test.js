@@ -41,7 +41,8 @@ test("generate random genealogical tree", () => {
   expect(exo2.generateRandomGenealogicalTree()).toHaveProperty("name");
 });
 
-test("generate random number of persons", () => {
-  const res = exo3.generateRandomNumberOfPerson();
-  expect(Array.isArray(res)).toBe(true);
+test("display country", () => {
+  const res = exo3.displayNamesInsideCountry();
+  const checked = JSON.stringify(res).includes("Citizen");
+  expect(checked).toBe(true);
 });
